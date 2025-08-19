@@ -1,4 +1,4 @@
-﻿using GestionAPI.Application.DTOs;
+﻿using GestionAPI.Application.DTOs.Request;
 using GestionAPI.Application.Interfaces.IService;
 using GestionAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -24,9 +24,9 @@ namespace GestionAPI.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ClientEntity> GetClientById(int id)
+        public async Task<ClientEntity> GetClientById(int clientId)
         {
-            return await clientService.GetClientByIdAsync(id);
+            return await clientService.GetClientByIdAsync(clientId);
         }
 
         [HttpPost]
@@ -36,15 +36,16 @@ namespace GestionAPI.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task UpdateClient(int id, [FromBody] string name, string mail)
+        public async Task UpdateClient(int clientId, [FromBody] ClientRequest clientRequest)
         {
-            await clientService.UpdateClientAsync(id, name, mail);
+            await clientService.UpdateClientAsync(clientId, clientRequest);
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteClient(int id)
+        public async Task DeleteClient(int clientId)
         {
-            await clientService.DeleteClientAsync(id);
+            await clientService.DeleteClientAsync(clientId);
         }
+
     }
 }
