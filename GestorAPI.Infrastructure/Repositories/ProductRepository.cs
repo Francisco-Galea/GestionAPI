@@ -4,11 +4,11 @@ using GestionAPI.Infrastructure.Data;
 
 namespace GestionAPI.Infrastructure.Repositories
 {
-    public class ClientRepository : Repository<ClientEntity>, IClientRepository
+    public class ProductRepository : Repository<ProductEntity>, IProductRepository
     {
         private readonly GestionDbContext dbContext;
 
-        public ClientRepository(GestionDbContext dbContext) : base(dbContext)
+        public ProductRepository(GestionDbContext dbContext) : base(dbContext)
         {
             this.dbContext = dbContext;
         }

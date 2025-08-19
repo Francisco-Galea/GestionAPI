@@ -4,17 +4,13 @@ using GestionAPI.Infrastructure.Data;
 
 namespace GestionAPI.Infrastructure.Repositories
 {
-    public class ClientRepository : Repository<ClientEntity>, IClientRepository
+    public class OrderRepository : Repository<OrderEntity>, IOrderRepository
     {
         private readonly GestionDbContext dbContext;
 
-        public ClientRepository(GestionDbContext dbContext) : base(dbContext)
+        public OrderRepository(GestionDbContext dbContext) : base(dbContext)
         {
             this.dbContext = dbContext;
-        }
-
-        public async override Task LogicalDeleteAsync(int classId)
-        {
         }
 
     }

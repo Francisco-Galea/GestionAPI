@@ -15,10 +15,13 @@ var connectionString = builder.Configuration.GetConnectionString("sqlServerConne
 builder.Services.AddDbContext<GestionDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-//Repositories
+//Services
 builder.Services.AddScoped<IClientService, ClientService>();
-builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
+//Repositories
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 
 var app = builder.Build();
