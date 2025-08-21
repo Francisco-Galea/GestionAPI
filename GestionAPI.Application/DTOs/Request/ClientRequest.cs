@@ -2,7 +2,7 @@
 {
     public class ClientRequest
     {
-        public string ClientName { get; set; }
-        public string ClientEmail { get; set; }
+        public string ClientName { get; set; } = string.Empty;
+        public string ClientEmail { get; set; } = string.Empty;
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace GestionAPI.Application.DTOs.Request
+﻿namespace GestionAPI.Application.DTOs.Request
 {
     public class OrderRequest
     {
