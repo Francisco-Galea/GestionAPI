@@ -3,22 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GestionAPI.Domain.Entities
 {
-    public class ClientEntity
+    public class OrderStateEntity
     {
         [Key]
-        public int ClientId { get; set; }
+        public int OrderStateId { get; set; }
 
         [Required]
-        [MaxLength(60)]
-        public string ClientName { get; set; } = string.Empty;
+        [StringLength(60)]
+        public string OrderStateName { get; set; } = string.Empty;
 
         [Required]
-        [MaxLength(100)]
-        public string ClientEmail { get; set; } = string.Empty;
-
-        [Required]
-        [MaxLength(100)]
-        public string ClientPhoneNumber {  get; set; } = string.Empty;
+        [StringLength(90)]
+        public string OrderColor { get; set; } = string.Empty;
 
         public int UserId { get; set; }
 
