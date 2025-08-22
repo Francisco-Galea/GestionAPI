@@ -15,11 +15,11 @@ Un sistema completo de gestión empresarial desarrollado con .NET Core Web API y
 ### Backend (.NET Core 8)
 
 GestionAPI/
-├── GestorAPI.API/              # Capa de Presentación 
-├── GestionAPI.Application/     # Capa de Aplicación 
-├── GestorAPI.Domain/          # Capa de Dominio 
-├── GestorAPI.Infrastructure/  # Capa de Infraestructura 
-└── GestionAPI.BlazorUI/       # Frontend Blazor web app
+GestorAPI.API/              # Capa de Presentación 
+GestionAPI.Application/     # Capa de Aplicación 
+GestorAPI.Domain/          # Capa de Dominio 
+GestorAPI.Infrastructure/  # Capa de Infraestructura 
+GestionAPI.BlazorUI/       # Frontend Blazor web app
 
 ### Principios de Clean Architecture
 
@@ -56,9 +56,9 @@ GestionAPI/
 
 csharp
 UserEntity (Usuarios del Sistema)
-├── ClientEntity (Clientes)
-├── OrderEntity (Órdenes) 
-├── ProductEntity (Productos) 
-└── OrderStateEntity (Estados de Órdenes) 
+ClientEntity (Clientes)
+OrderEntity (Órdenes) 
+ProductEntity (Productos) 
+OrderStateEntity (Estados de Órdenes) 
 
 
