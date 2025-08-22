@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionAPI.Infrastructure",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionAPI.API", "GestorAPI.API\GestionAPI.API.csproj", "{BA508684-B3F8-42BD-893A-26D4C3E6157D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionAPI.BlazorUI", "GestionAPI.BlazorUI\GestionAPI.BlazorUI.csproj", "{0B9F53FC-89F4-47A9-A950-507D38537825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BA508684-B3F8-42BD-893A-26D4C3E6157D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA508684-B3F8-42BD-893A-26D4C3E6157D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA508684-B3F8-42BD-893A-26D4C3E6157D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9F53FC-89F4-47A9-A950-507D38537825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9F53FC-89F4-47A9-A950-507D38537825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9F53FC-89F4-47A9-A950-507D38537825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9F53FC-89F4-47A9-A950-507D38537825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
