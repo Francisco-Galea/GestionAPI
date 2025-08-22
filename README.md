@@ -55,10 +55,10 @@ GestionAPI.BlazorUI/       # Frontend Blazor web app
 ### Entidades Principales
 
 csharp
-- **UserEntity (Usuarios del Sistema)
-- **ClientEntity (Clientes)
-- **OrderEntity (Órdenes) 
-- **ProductEntity (Productos) 
-- **OrderStateEntity (Estados de Órdenes) 
+- **UserEntity** (Usuarios del Sistema)
+- **ClientEntity** (Clientes)
+- **OrderEntity** (Órdenes) 
+- **ProductEntity** (Productos) 
+- **OrderStateEntity** (Estados de Órdenes) 
 
 
