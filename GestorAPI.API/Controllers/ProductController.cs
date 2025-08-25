@@ -1,37 +1,51 @@
-﻿using GestionAPI.Domain.Entities;
+﻿using GestionAPI.Application.DTOs.Request;
+using GestionAPI.Application.Interfaces.IService;
+using GestionAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GestionAPI.API.Controllers
 {
     [Route("api/products")]
     [ApiController]
-    public class ProductController 
+    public class ProductController : ControllerBase
     {
-        [HttpGet]
-        public List<ProductEntity> GetAllProducts()
+
+        private readonly IProductService productService;
+
+        public ProductController(IProductService productService)
         {
-            throw new NotImplementedException();
+            this.productService = productService;
+        }
+
+        [HttpGet]
+        public async Task<List<ProductEntity>> GetAllProducts()
+        {
+            return await productService.GetAllProducts();
         }
 
         [HttpGet("{id}")]
-        public string GetProductById(int id)
+        public async Task<ProductEntity> GetProductById(int productId)
         {
-            return "value";
+            return await productService.GetProductById(productId);
         }
 
         [HttpPost]
-        public void PostProduct([FromBody] string value)
+        public async Task PostProduct([FromBody] ProductRequest product)
         {
+            await productService.CreateProduct(product);
         }
 
         [HttpPut("{id}")]
-        public void UpdateProduct(int id, [FromBody] string value)
+        public async void UpdateProduct(int productId, [FromBody] ProductRequest productRequest)
         {
+            await productService.UpdateProduct(productId, productRequest);
         }
 
         [HttpDelete("{id}")]
-        public void DeleteProduct(int id)
+        public async void DeleteProduct(int productId)
         {
+            await productService.DeleteProduct(productId);
         }
+
     }
 }

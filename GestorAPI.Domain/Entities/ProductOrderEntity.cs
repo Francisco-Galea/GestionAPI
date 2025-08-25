@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace GestionAPI.Domain.Entities
@@ -14,6 +13,7 @@ namespace GestionAPI.Domain.Entities
         public ProductEntity Product { get; set; }
 
         public int OrderId { get; set; }
+
         [ForeignKey("OrderId")]
         public OrderEntity Order { get; set; }
 
@@ -23,7 +23,7 @@ namespace GestionAPI.Domain.Entities
         [Column(TypeName = "decimal(18,2)")]
         public decimal UnitaryPrice { get; set; }
 
-        public bool IsOrderActive { get; set; } = true;
-        public bool IsDeleted { get; set; } = false;
+        public DateTime DeletedAt { get; set; }
+
     }
 }

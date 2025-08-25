@@ -1,4 +1,4 @@
-﻿using GestionAPI.Application.DTOs;
+﻿using GestionAPI.Application.DTOs.Request;
 using GestionAPI.Application.Interfaces.IRepository;
 using GestionAPI.Application.Interfaces.IService;
 using GestionAPI.Domain.Entities;
@@ -40,9 +40,13 @@ namespace GestionAPI.Application.Services
             return await repository.GetByIdAsync(clientId);
         }
 
-        public async Task UpdateClientAsync(int clientId, string name, string email)
+        public async Task UpdateClientAsync(int clientId, ClientRequest clientRequest)
         {
-            ClientEntity client = new ClientEntity() { ClientId = clientId, ClientName = name, ClientEmail = email };
+            ClientEntity client = new ClientEntity() { 
+                ClientId = clientId, 
+                ClientName = clientRequest.ClientName, 
+                ClientEmail = clientRequest.ClientEmail 
+            };
             await repository.UpdateAsync(client);
         }
     }
