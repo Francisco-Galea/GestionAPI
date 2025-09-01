@@ -19,7 +19,6 @@ GestorAPI.API/              Capa de Presentación
 GestionAPI.Application/     Capa de Aplicación 
 GestorAPI.Domain/           Capa de Dominio 
 GestorAPI.Infrastructure/   Capa de Infraestructura 
-GestionAPI.BlazorUI/        Frontend Blazor web app
 
 
 ### Principios de Clean Architecture
@@ -41,9 +40,7 @@ GestionAPI.BlazorUI/        Frontend Blazor web app
 - **Swagger/OpenAPI**: Documentación de API
 
 ### Frontend Stack
-- **Blazor Web App**: Framework de UI interactivo
-- **Bootstrap**: Framework CSS para diseño responsivo
-- **HTML5 & CSS3**: Tecnologías web estándar
+- **Angular**: Framework de UI interactivo (Pronto)
 
 ### Herramientas de Desarrollo
 - **Visual Studio 2022**: IDE principal
